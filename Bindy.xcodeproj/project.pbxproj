@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6E083A1E303DB600EB2D09 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E08391E303DB600EB2D09 /* Transformer.swift */; };
 		0FFD47F41E2F313B00E0FDAD /* Bindy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */; };
 		0FFD47F91E2F313B00E0FDAD /* BindyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD47F81E2F313B00E0FDAD /* BindyTests.swift */; };
 		0FFD47FB1E2F313B00E0FDAD /* Bindy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FFD47ED1E2F313B00E0FDAD /* Bindy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FFD48081E2F317000E0FDAD /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48041E2F317000E0FDAD /* Binder.swift */; };
+		0FFD48091E2F317000E0FDAD /* CallbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48051E2F317000E0FDAD /* CallbackList.swift */; };
+		0FFD480A1E2F317000E0FDAD /* CocoaTouch+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */; };
+		0FFD480B1E2F317000E0FDAD /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48071E2F317000E0FDAD /* ObservableValue.swift */; };
+		0FFD48131E2F318D00E0FDAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48121E2F318D00E0FDAD /* AppDelegate.swift */; };
+		0FFD48151E2F318D00E0FDAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48141E2F318D00E0FDAD /* ViewController.swift */; };
+		0FFD48181E2F318D00E0FDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD48161E2F318D00E0FDAD /* Main.storyboard */; };
+		0FFD481A1E2F318D00E0FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD48191E2F318D00E0FDAD /* Assets.xcassets */; };
+		0FFD481D1E2F318D00E0FDAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD481B1E2F318D00E0FDAD /* LaunchScreen.storyboard */; };
+		0FFD48241E2F368500E0FDAD /* Bindy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */; };
+		0FFD48261E30077800E0FDAD /* Bindy.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD48251E30077800E0FDAD /* Bindy.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +32,35 @@
 			remoteGlobalIDString = 0FFD47E91E2F313B00E0FDAD;
 			remoteInfo = Bindy;
 		};
+		0FFD48221E2F368000E0FDAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FFD47E11E2F313B00E0FDAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FFD47E91E2F313B00E0FDAD;
+			remoteInfo = Bindy;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6E08391E303DB600EB2D09 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bindy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFD47ED1E2F313B00E0FDAD /* Bindy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bindy.h; sourceTree = "<group>"; };
 		0FFD47EE1E2F313B00E0FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FFD47F31E2F313B00E0FDAD /* BindyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BindyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFD47F81E2F313B00E0FDAD /* BindyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindyTests.swift; sourceTree = "<group>"; };
 		0FFD47FA1E2F313B00E0FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFD48041E2F317000E0FDAD /* Binder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
+		0FFD48051E2F317000E0FDAD /* CallbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackList.swift; sourceTree = "<group>"; };
+		0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CocoaTouch+Binding.swift"; sourceTree = "<group>"; };
+		0FFD48071E2F317000E0FDAD /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		0FFD48101E2F318D00E0FDAD /* BindyTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BindyTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FFD48121E2F318D00E0FDAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0FFD48141E2F318D00E0FDAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FFD48171E2F318D00E0FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0FFD48191E2F318D00E0FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FFD481C1E2F318D00E0FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0FFD481E1E2F318D00E0FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFD48251E30077800E0FDAD /* Bindy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Bindy.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +79,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FFD480D1E2F318D00E0FDAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FFD48241E2F368500E0FDAD /* Bindy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0FFD47E01E2F313B00E0FDAD = {
 			isa = PBXGroup;
 			children = (
+				0FFD48251E30077800E0FDAD /* Bindy.podspec */,
 				0FFD47EC1E2F313B00E0FDAD /* Bindy */,
 				0FFD47F71E2F313B00E0FDAD /* BindyTests */,
+				0FFD48111E2F318D00E0FDAD /* BindyTestApp */,
 				0FFD47EB1E2F313B00E0FDAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +106,7 @@
 			children = (
 				0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */,
 				0FFD47F31E2F313B00E0FDAD /* BindyTests.xctest */,
+				0FFD48101E2F318D00E0FDAD /* BindyTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +114,11 @@
 		0FFD47EC1E2F313B00E0FDAD /* Bindy */ = {
 			isa = PBXGroup;
 			children = (
+				0FFD48051E2F317000E0FDAD /* CallbackList.swift */,
+				0FFD48071E2F317000E0FDAD /* ObservableValue.swift */,
+				0FFD48041E2F317000E0FDAD /* Binder.swift */,
+				0F6E08391E303DB600EB2D09 /* Transformer.swift */,
+				0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */,
 				0FFD47ED1E2F313B00E0FDAD /* Bindy.h */,
 				0FFD47EE1E2F313B00E0FDAD /* Info.plist */,
 			);
@@ -84,6 +132,19 @@
 				0FFD47FA1E2F313B00E0FDAD /* Info.plist */,
 			);
 			path = BindyTests;
+			sourceTree = "<group>";
+		};
+		0FFD48111E2F318D00E0FDAD /* BindyTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				0FFD48121E2F318D00E0FDAD /* AppDelegate.swift */,
+				0FFD48141E2F318D00E0FDAD /* ViewController.swift */,
+				0FFD48161E2F318D00E0FDAD /* Main.storyboard */,
+				0FFD48191E2F318D00E0FDAD /* Assets.xcassets */,
+				0FFD481B1E2F318D00E0FDAD /* LaunchScreen.storyboard */,
+				0FFD481E1E2F318D00E0FDAD /* Info.plist */,
+			);
+			path = BindyTestApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +197,24 @@
 			productReference = 0FFD47F31E2F313B00E0FDAD /* BindyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0FFD480F1E2F318D00E0FDAD /* BindyTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FFD481F1E2F318D00E0FDAD /* Build configuration list for PBXNativeTarget "BindyTestApp" */;
+			buildPhases = (
+				0FFD480C1E2F318D00E0FDAD /* Sources */,
+				0FFD480D1E2F318D00E0FDAD /* Frameworks */,
+				0FFD480E1E2F318D00E0FDAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FFD48231E2F368000E0FDAD /* PBXTargetDependency */,
+			);
+			name = BindyTestApp;
+			productName = BindyTestApp;
+			productReference = 0FFD48101E2F318D00E0FDAD /* BindyTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,9 +228,15 @@
 					0FFD47E91E2F313B00E0FDAD = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = F256K9XGKC;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					0FFD47F21E2F313B00E0FDAD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F256K9XGKC;
+						ProvisioningStyle = Automatic;
+					};
+					0FFD480F1E2F318D00E0FDAD = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = F256K9XGKC;
 						ProvisioningStyle = Automatic;
@@ -164,6 +249,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0FFD47E01E2F313B00E0FDAD;
 			productRefGroup = 0FFD47EB1E2F313B00E0FDAD /* Products */;
@@ -172,6 +258,7 @@
 			targets = (
 				0FFD47E91E2F313B00E0FDAD /* Bindy */,
 				0FFD47F21E2F313B00E0FDAD /* BindyTests */,
+				0FFD480F1E2F318D00E0FDAD /* BindyTestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFD48261E30077800E0FDAD /* Bindy.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +279,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FFD480E1E2F318D00E0FDAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FFD481D1E2F318D00E0FDAD /* LaunchScreen.storyboard in Resources */,
+				0FFD481A1E2F318D00E0FDAD /* Assets.xcassets in Resources */,
+				0FFD48181E2F318D00E0FDAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -198,6 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFD48091E2F317000E0FDAD /* CallbackList.swift in Sources */,
+				0FFD480A1E2F317000E0FDAD /* CocoaTouch+Binding.swift in Sources */,
+				0FFD480B1E2F317000E0FDAD /* ObservableValue.swift in Sources */,
+				0F6E083A1E303DB600EB2D09 /* Transformer.swift in Sources */,
+				0FFD48081E2F317000E0FDAD /* Binder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +312,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FFD480C1E2F318D00E0FDAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FFD48151E2F318D00E0FDAD /* ViewController.swift in Sources */,
+				0FFD48131E2F318D00E0FDAD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -217,7 +329,31 @@
 			target = 0FFD47E91E2F313B00E0FDAD /* Bindy */;
 			targetProxy = 0FFD47F51E2F313B00E0FDAD /* PBXContainerItemProxy */;
 		};
+		0FFD48231E2F368000E0FDAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FFD47E91E2F313B00E0FDAD /* Bindy */;
+			targetProxy = 0FFD48221E2F368000E0FDAD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0FFD48161E2F318D00E0FDAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FFD48171E2F318D00E0FDAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0FFD481B1E2F318D00E0FDAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FFD481C1E2F318D00E0FDAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0FFD47FC1E2F313B00E0FDAD /* Debug */ = {
@@ -322,6 +458,7 @@
 		0FFD47FF1E2F313B00E0FDAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = F256K9XGKC;
@@ -334,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cristik.Bindy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +479,7 @@
 		0FFD48001E2F313B00E0FDAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = F256K9XGKC;
@@ -360,6 +499,7 @@
 		0FFD48021E2F313B00E0FDAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = F256K9XGKC;
 				INFOPLIST_FILE = BindyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,10 +512,37 @@
 		0FFD48031E2F313B00E0FDAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = F256K9XGKC;
 				INFOPLIST_FILE = BindyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cristik.BindyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0FFD48201E2F318D00E0FDAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F256K9XGKC;
+				INFOPLIST_FILE = BindyTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristik.BindyTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0FFD48211E2F318D00E0FDAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F256K9XGKC;
+				INFOPLIST_FILE = BindyTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristik.BindyTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -400,6 +567,7 @@
 				0FFD48001E2F313B00E0FDAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FFD48011E2F313B00E0FDAD /* Build configuration list for PBXNativeTarget "BindyTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +576,16 @@
 				0FFD48031E2F313B00E0FDAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FFD481F1E2F318D00E0FDAD /* Build configuration list for PBXNativeTarget "BindyTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FFD48201E2F318D00E0FDAD /* Debug */,
+				0FFD48211E2F318D00E0FDAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
