@@ -14,7 +14,6 @@ public final class Binder {
                 l2r: @escaping (T) -> U,
                 r2l: @escaping (U) -> T) where O1.ValueType == T, O2.ValueType == U {
         
-        left.value = r2l(right.value)
         right.value = l2r(left.value)
         
         let leftCallbackEntry = left.register {

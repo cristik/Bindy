@@ -52,6 +52,20 @@ public extension UIView {
     }
 }
 
+public extension UIControl {
+    public func bindIsEnabled<O: Observable>(to observable: O) -> Binder where O.ValueType == Bool {
+        return bindIsEnabled(to: observable, transformer: IdentityTransformer())
+    }
+    
+    public func bindIsEnabled<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == Bool {
+        return Binder(left: observable,
+                      right: ClosureObservable(getter: { return self.isEnabled },
+                                               setter: { self.isEnabled = $0 }),
+                      l2r: { transformer.transform($0) },
+                      r2l: { transformer.reverseTransform($0) })
+    }
+}
+
 public extension UserDefaults {
     public func observableBool<O: Observable>(forKey key: String) -> O where O.ValueType == Bool {
         return KVOObservable(object: self,
