@@ -66,6 +66,20 @@ public extension UIControl {
     }
 }
 
+public extension UIImageView {
+    public func bindImage<O: Observable>(to observable: O) -> Binder where O.ValueType == UIImage? {
+        return bindImage(to: observable, transformer: IdentityTransformer())
+    }
+    
+    public func bindImage<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == UIImage? {
+        return Binder(left: observable,
+                      right: ClosureObservable(getter: { return self.image },
+                                               setter: { self.image = $0 }),
+                      l2r: { transformer.transform($0) },
+                      r2l: { transformer.reverseTransform($0) })
+    }
+}
+
 public extension UserDefaults {
     public func observableBool<O: Observable>(forKey key: String) -> O where O.ValueType == Bool {
         return KVOObservable(object: self,
