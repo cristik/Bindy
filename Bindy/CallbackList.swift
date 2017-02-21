@@ -1,4 +1,3 @@
-
 fileprivate final class CallbackListEntry {
     fileprivate let cleanup: (CallbackListEntry) -> Void
     

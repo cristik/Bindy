@@ -50,6 +50,14 @@ public extension UIView {
                       l2r: { transformer.transform($0) },
                       r2l: { transformer.reverseTransform($0) })
     }
+    
+    public func bindIsHidden<V, O: Observable>(to observable: O,
+                             transformer: @escaping (V) -> Bool) -> AnyObject where O.ValueType == V {
+        isHidden = transformer(observable.value)
+        return observable.register {
+            self.isHidden = transformer($0)
+        }
+    }
 }
 
 public extension UIControl {

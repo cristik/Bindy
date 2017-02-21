@@ -11,8 +11,7 @@ public protocol Observable: class {
 
 extension Observable where ValueType == Bool {
     var not: Self {
-        let negated = AnyObservable(self)
-        
+        let negated = AnyObservable(self)        
         return negated  as! Self
     }
 }
