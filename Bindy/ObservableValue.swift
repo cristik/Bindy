@@ -1,7 +1,7 @@
 import Foundation
 
 public final class ObservableValue<T>: Observable {
-    private var callbackList = CallbackList<T,Void>()
+    private var callbackList = CallbackList<T>()
 
     public var value: T {
         didSet {
@@ -23,7 +23,7 @@ public final class ObservableValue<T>: Observable {
 }
 
 public final class KVOObservable<T>: NSObject, Observable {
-    private var callbackList = CallbackList<T,Void>()
+    private var callbackList = CallbackList<T>()
     public let object: NSObject
     public let keyPath: String
     public let transformer: ((Any?) -> T)?
@@ -69,7 +69,7 @@ public final class KVOObservable<T>: NSObject, Observable {
 }
 
 public final class ClosureObservable<T>: Observable {
-    private var callbackList = CallbackList<T,Void>()
+    private var callbackList = CallbackList<T>()
     private let getter: () -> T
     private let setter: (T) -> Void
     
@@ -93,7 +93,7 @@ public final class ClosureObservable<T>: Observable {
 }
 
 public final class ControlValueObservable<T>: NSObject, Observable {
-    private var callbackList = CallbackList<T,Void>()
+    private var callbackList = CallbackList<T>()
     private let getter: () -> T
     private let setter: (T) -> Void
     
@@ -128,7 +128,7 @@ public final class ControlValueObservable<T>: NSObject, Observable {
 
 // TODO: not complete
 public final class ObservableArray<T>: Observable {
-    private var callbackList = CallbackList<[T],Void>()
+    private var callbackList = CallbackList<[T]>()
     fileprivate var storage: [T]
     public var value: [T] {
         get { return storage }
