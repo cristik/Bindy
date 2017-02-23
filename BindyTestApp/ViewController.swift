@@ -20,8 +20,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        binders.append(switch1.bindIsOn(to: textfield1.observableText(), transformer: InlineTransformer(direct: { return $0 == "On" }, reverse: { $0 ? "On" : "Off" })))
-        binders.append(switch2.bindIsOn(to: UserDefaults.standard.observableBool(forKey: "switch2")))
+        binders.append(switch1.bindIsOn(to: textfield1.observableText(true),
+                                        transform: { return $0 == "On" },
+                                        reverseTransform: { $0 ? "On" : "Off" }))
+        //binders.append(switch2.bindIsOn(to: UserDefaults.standard.observableBool(forKey: "switch2")))
     }
 
     override func didReceiveMemoryWarning() {

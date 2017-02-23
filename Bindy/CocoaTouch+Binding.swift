@@ -9,17 +9,19 @@
 import UIKit
 
 public extension UISwitch {
-    public func bindIsOn<O: Observable>(to observable: O) -> Binder where O.ValueType == Bool {
-        return bindIsOn(to: observable, transformer: IdentityTransformer())
+    
+    public func bindIsOn<O: Observable>(to observable: O) -> AnyObject where O.ValueType == Bool {
+        return bindIsOn(to: observable, transform: { $0 }, reverseTransform: { $0 })
     }
     
-    public func bindIsOn<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == Bool {
-        return Binder(left: observable,
-                      right: ControlValueObservable(control: self,
-                                                   getter: { return self.isOn },
-                                                   setter: { self.isOn = $0 }),
-                      l2r: { transformer.transform($0) },
-                      r2l: { transformer.reverseTransform($0) })
+    public func bindIsOn<T, O: Observable>(to observable: O, transform: @escaping (T) -> Bool,
+                         reverseTransform: @escaping (Bool) -> T) -> AnyObject where O.ValueType == T {
+        return ControlValueObservable(control: self,
+                                      getter: { return self.isOn },
+                                      setter: { self.isOn = $0 })
+            .bind(to: observable,
+                  transform: transform,
+                  reverseTransform: reverseTransform)
     }
 }
 
@@ -39,52 +41,38 @@ public extension UITextField {
 }
 
 public extension UIView {
-    public func bindIsHidden<O: Observable>(to observable: O) -> Binder where O.ValueType == Bool {
-        return bindIsHidden(to: observable, transformer: IdentityTransformer())
+    public func bindIsHidden<O: Observable>(to observable: O) -> AnyObject where O.ValueType == Bool {
+        return bindIsHidden(to: observable, transform: { $0 })
     }
     
-    public func bindIsHidden<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == Bool {
-        return Binder(left: observable,
-                      right: ClosureObservable(getter: { return self.isHidden },
-                                               setter: { self.isHidden = $0 }),
-                      l2r: { transformer.transform($0) },
-                      r2l: { transformer.reverseTransform($0) })
-    }
-    
-    public func bindIsHidden<V, O: Observable>(to observable: O,
-                             transformer: @escaping (V) -> Bool) -> AnyObject where O.ValueType == V {
-        isHidden = transformer(observable.value)
-        return observable.register {
-            self.isHidden = transformer($0)
-        }
+    public func bindIsHidden<T, O: Observable>(to observable: O, transform: @escaping (T) -> Bool) -> AnyObject where O.ValueType == T {
+        return ClosureObservable(getter: { return self.isHidden },
+                                 setter: { self.isHidden = $0 })
+            .connect(to: observable, transform: transform)
     }
 }
 
 public extension UIControl {
-    public func bindIsEnabled<O: Observable>(to observable: O) -> Binder where O.ValueType == Bool {
-        return bindIsEnabled(to: observable, transformer: IdentityTransformer())
+    public func bindIsEnabled<O: Observable>(to observable: O) -> AnyObject where O.ValueType == Bool {
+        return bindIsEnabled(to: observable, transform: { $0 })
     }
     
-    public func bindIsEnabled<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == Bool {
-        return Binder(left: observable,
-                      right: ClosureObservable(getter: { return self.isEnabled },
-                                               setter: { self.isEnabled = $0 }),
-                      l2r: { transformer.transform($0) },
-                      r2l: { transformer.reverseTransform($0) })
+    public func bindIsEnabled<T, O: Observable>(to observable: O, transform: @escaping (T) -> Bool) -> AnyObject where O.ValueType == T {
+        return ClosureObservable(getter: { return self.isEnabled },
+                                 setter: { self.isEnabled = $0 })
+            .connect(to: observable, transform: transform)
     }
 }
 
 public extension UIImageView {
-    public func bindImage<O: Observable>(to observable: O) -> Binder where O.ValueType == UIImage? {
-        return bindImage(to: observable, transformer: IdentityTransformer())
+    public func bindImage<O: Observable>(to observable: O) -> AnyObject where O.ValueType == UIImage? {
+        return bindImage(to: observable, transform: { $0 })
     }
     
-    public func bindImage<V, O: Observable, T: Transformer>(to observable: O, transformer: T) -> Binder where O.ValueType == V, T.From == V, T.To == UIImage? {
-        return Binder(left: observable,
-                      right: ClosureObservable(getter: { return self.image },
-                                               setter: { self.image = $0 }),
-                      l2r: { transformer.transform($0) },
-                      r2l: { transformer.reverseTransform($0) })
+    public func bindImage<T, O: Observable>(to observable: O, transform: @escaping (T) -> UIImage?) -> AnyObject where O.ValueType == T {
+        return ClosureObservable(getter: { return self.image },
+                          setter: { self.image = $0 })
+            .connect(to: observable, transform: transform)
     }
 }
 

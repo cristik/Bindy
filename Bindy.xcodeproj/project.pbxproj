@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F6E083A1E303DB600EB2D09 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E08391E303DB600EB2D09 /* Transformer.swift */; };
+		0F8913591E5CC97D00A144B7 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8913581E5CC97D00A144B7 /* Observable.swift */; };
 		0FFD47F41E2F313B00E0FDAD /* Bindy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */; };
 		0FFD47F91E2F313B00E0FDAD /* BindyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD47F81E2F313B00E0FDAD /* BindyTests.swift */; };
 		0FFD47FB1E2F313B00E0FDAD /* Bindy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FFD47ED1E2F313B00E0FDAD /* Bindy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0FFD48081E2F317000E0FDAD /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48041E2F317000E0FDAD /* Binder.swift */; };
 		0FFD48091E2F317000E0FDAD /* CallbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48051E2F317000E0FDAD /* CallbackList.swift */; };
 		0FFD480A1E2F317000E0FDAD /* CocoaTouch+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */; };
 		0FFD480B1E2F317000E0FDAD /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD48071E2F317000E0FDAD /* ObservableValue.swift */; };
@@ -43,13 +43,13 @@
 
 /* Begin PBXFileReference section */
 		0F6E08391E303DB600EB2D09 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		0F8913581E5CC97D00A144B7 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		0FFD47EA1E2F313B00E0FDAD /* Bindy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bindy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFD47ED1E2F313B00E0FDAD /* Bindy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bindy.h; sourceTree = "<group>"; };
 		0FFD47EE1E2F313B00E0FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FFD47F31E2F313B00E0FDAD /* BindyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BindyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFD47F81E2F313B00E0FDAD /* BindyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindyTests.swift; sourceTree = "<group>"; };
 		0FFD47FA1E2F313B00E0FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FFD48041E2F317000E0FDAD /* Binder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
 		0FFD48051E2F317000E0FDAD /* CallbackList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackList.swift; sourceTree = "<group>"; };
 		0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CocoaTouch+Binding.swift"; sourceTree = "<group>"; };
 		0FFD48071E2F317000E0FDAD /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				0FFD48051E2F317000E0FDAD /* CallbackList.swift */,
+				0F8913581E5CC97D00A144B7 /* Observable.swift */,
 				0FFD48071E2F317000E0FDAD /* ObservableValue.swift */,
-				0FFD48041E2F317000E0FDAD /* Binder.swift */,
 				0F6E08391E303DB600EB2D09 /* Transformer.swift */,
 				0FFD48061E2F317000E0FDAD /* CocoaTouch+Binding.swift */,
 				0FFD47ED1E2F313B00E0FDAD /* Bindy.h */,
@@ -300,7 +300,7 @@
 				0FFD480A1E2F317000E0FDAD /* CocoaTouch+Binding.swift in Sources */,
 				0FFD480B1E2F317000E0FDAD /* ObservableValue.swift in Sources */,
 				0F6E083A1E303DB600EB2D09 /* Transformer.swift in Sources */,
-				0FFD48081E2F317000E0FDAD /* Binder.swift in Sources */,
+				0F8913591E5CC97D00A144B7 /* Observable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

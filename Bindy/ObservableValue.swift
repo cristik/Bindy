@@ -1,48 +1,5 @@
 import Foundation
 
-public protocol Observable: class {
-    associatedtype ValueType
-    
-    var value: ValueType { get set }
-    
-    func register(callback: @escaping (ValueType) -> Void) -> AnyObject
-    func deregister(entry: AnyObject)
-}
-
-extension Observable where ValueType == Bool {
-    var not: Self {
-        let negated = AnyObservable(self)        
-        return negated  as! Self
-    }
-}
-
-public final class AnyObservable<T>: Observable {
-    private let _getter: () -> T
-    private let _setter: (T) -> Void
-    private let _register: (@escaping (T) -> Void) -> AnyObject
-    private let _deregister: (AnyObject) -> Void
-    
-    public var value: T {
-        get { return _getter() }
-        set { _setter(newValue) }
-    }
-    
-    public init<O: Observable>(_ observable: O) where O.ValueType == T {
-        _getter = { return observable.value }
-        _setter = { observable.value = $0 }
-        _register = observable.register
-        _deregister = observable.deregister
-    }
-    
-    public func register(callback: @escaping (T) -> Void) -> AnyObject {
-        return _register(callback)
-    }
-    
-    public func deregister(entry: AnyObject) {
-        _deregister(entry)
-    }
-}
-
 public final class ObservableValue<T>: Observable {
     private var callbackList = CallbackList<T,Void>()
 
