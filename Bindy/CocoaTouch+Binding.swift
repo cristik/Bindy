@@ -26,8 +26,13 @@ public extension UISwitch {
 }
 
 public extension UILabel {
-    public func bindText(to: AnyObservable<String?>) {
-        
+    public func bindText<O: Observable>(to observable: O) -> AnyObject where O.ValueType == String? {
+        return bindText(to: observable, transform: { $0 })
+    }
+    
+    public func bindText<T, O: Observable>(to observable: O, transform: @escaping (T) -> String?) -> AnyObject where O.ValueType == T {
+        return ClosureObservable(getter: { return self.text }, setter: { self.text = $0 })
+        .connect(to: observable, transform: transform)
     }
 }
 
@@ -37,6 +42,15 @@ public extension UITextField {
                                                     getter: { return self.text },
                                                     setter: { self.text = $0 },
                                                     event: continous ? .editingChanged : .editingDidEnd))
+    }
+    
+    public func bindText<O: Observable>(to observable: O) -> AnyObject where O.ValueType == String? {
+        return bindText(to: observable, transform: { $0 }, reverseTransform: { $0 })
+    }
+    
+    public func bindText<T, O: Observable>(to observable: O, transform: @escaping (T) -> String?, reverseTransform: @escaping (String?) -> T) -> AnyObject where O.ValueType == T {
+        return ClosureObservable(getter: { return self.text }, setter: { self.text = $0 })
+            .bind(to: observable, transform: transform, reverseTransform: reverseTransform)
     }
 }
 
