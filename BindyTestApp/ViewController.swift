@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        binders.append(switch1.bindIsOn(to: textfield1.observableText(true),
+        binders.append(switch1.bindIsOn(to: textfield1.observableText(continous: true),
                                         transform: { return $0 == "On" },
                                         reverseTransform: { $0 ? "On" : "Off" }))
         //binders.append(switch2.bindIsOn(to: UserDefaults.standard.observableBool(forKey: "switch2")))
